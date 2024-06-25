@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Optimizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        #startupContainer {
+            display: none;
+        }
+        body{
+            background-color: rgba(0, 238, 255, 0.897);
+        }
+        .btn{
+            width: 100%;
+        }
+
+        .btns{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">System Optimizer</h1>
+        <div class="text-center my-3 btns">
+            <button style="color: white; background-color: rgb(25, 0, 255);" id="scanBtn" class="btn mx-1">Scan for Junk Files</button>
+            <button style="color: white; background-color: red;" id="cleanBtn" class="btn mx-1" disabled>Clean Junk Files</button>
+            <button style="color: black; background-color: yellow;" id="manageStartupBtn" class="btn mx-1">Manage Startup Programs</button>
+        </div>
+        <div class="progress my-3">
+            <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <ul id="fileList" class="list-group"></ul>
+        <div id="alertContainer" class="my-3"></div>
+        <div id="startupContainer" class="my-3">
+            <table id="startupTable" class="table table-responsive table-striped">
+                <thead>
+                    <tr>
+                        <th>Program Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
