@@ -1,3 +1,5 @@
+# MyCleaner is a windows application developed in Node JS using electron package.
+
 # Electron Startup Program Manager
 
 This Electron application allows users to manage Windows startup programs. It requires administrative privileges to perform registry operations.
@@ -19,7 +21,7 @@ This Electron application allows users to manage Windows startup programs. It re
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-repo/electron-startup-manager.git
+    git clone https://github.com/windowsapp/electron-startup-manager.git
     cd electron-startup-manager
     ```
 
